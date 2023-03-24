@@ -8,3 +8,11 @@ def page_contains_by_text(text: str)-> bool:
         return False
     else:
         return True
+
+def page_contains_by_id(id: str)-> bool:
+    elements = driver.find_elements(By.ID, id)
+
+    if len(elements) == 0:
+        return False
+    else:
+        return True

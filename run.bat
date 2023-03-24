@@ -1,3 +1,4 @@
+set TEST_PLAYER=fgbwrighoqfqwehfnwog
 start node "C:\Users\martv\Desktop\scratch\Bang_online\server\build\server.js"
 
 python -B "c:\Users\martv\Desktop\scratch\selenium_testing\main.py"
