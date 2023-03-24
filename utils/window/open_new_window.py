@@ -1,4 +1,6 @@
-def open_new_window(route: str, driver):
+from globals import driver
+
+def open_new_window(route: str):
     # open the link in a new tab
     driver.execute_script("window.open('" + route + "', '_blank');")
     # switch to the new tab
