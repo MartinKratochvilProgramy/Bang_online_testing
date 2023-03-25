@@ -1,4 +1,4 @@
-set TEST_PLAYER=fgbwrighoqfqwehfnwog
+set TEST_BANG=t_bang_dnpaueyIPoew
 start node "C:\Users\martv\Desktop\scratch\Bang_online\server\build\server.js"
 
 python -B "c:\Users\martv\Desktop\scratch\Bang_online_testing\main.py"

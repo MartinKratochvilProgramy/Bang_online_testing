@@ -1,7 +1,7 @@
 from selenium import webdriver
 
 ROUTE = "http://localhost:3000"
-USERS = ["fgbwrighoqfqwehfnwog", "b"]
+USERS = ["t_bang_dnpaueyIPoew", "b"]
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
