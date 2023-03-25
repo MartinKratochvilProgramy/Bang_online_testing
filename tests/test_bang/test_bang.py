@@ -1,4 +1,7 @@
 from selenium.webdriver.common.by import By
+from tests.test_bang.test_login import test_login
+from tests.test_bang.test_join_room import test_join_room
+from tests.test_bang.test_start_game import test_start_game
 from utils.logging.log_passed import log_passed
 from utils.logging.log_failed import log_failed
 from utils.window.switch_to_current_player_window import switch_to_current_player_window
@@ -12,6 +15,10 @@ from globals import *
 def test_bang():
     test_name = "Test Bang!"
     try:
+        test_login()
+        test_join_room()
+        test_start_game()
+
         switch_to_current_player_window()
         
         use_blue_card('Barilo')
