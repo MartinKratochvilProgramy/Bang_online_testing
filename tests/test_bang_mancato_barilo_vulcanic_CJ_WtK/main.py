@@ -17,6 +17,11 @@ from utils.locators.page_contains import page_contains_by_text
 from globals import *
 
 def test_bang_mancato_barilo_vulcanic_CJ_WtK():
+    '''
+        CJ against WtK
+        CJ uses Barilo
+        WtK uses Bang! on WtK, WtK uses Mancato!
+    '''
     test_name = "Test Bang!, Mancato!, Barilo, Vulcanic, CJ, WtK"
     try:
         test_login()
@@ -24,7 +29,7 @@ def test_bang_mancato_barilo_vulcanic_CJ_WtK():
         test_start_game()
 
         switch_to_current_player_window()
-        
+
         use_blue_card('Barilo')
 
         # USE BANG! #1
@@ -32,24 +37,26 @@ def test_bang_mancato_barilo_vulcanic_CJ_WtK():
         switch_to_window(USERS[1])
         if not page_contains_by_text('Lose health'):
             raise Exception('Target not losing health after Bang!')
+        log_passed('Use Bang!')
         use_mancato()
+        log_passed('Use Mancato!')
         
         switch_to_current_player_window()
         
         # USE VULCANIC, RESET BANG!
         use_blue_card('Vulcanic')
-
         # USE BANG! #2
         use_bang(USERS[1])
         switch_to_window(USERS[1])
         if not page_contains_by_text('Lose health'):
             raise Exception('Target not losing health after Bang!')
         use_mancato()
+        log_passed('Use Bang after Vulcanic')
         
         switch_to_current_player_window()
         
         end_turn()
-        switch_to_current_player_window()
+        
         use_bang(USERS[0])
         switch_to_window(USERS[0])
         if not player_table_contains_active_card('Barilo'):
@@ -60,24 +67,24 @@ def test_bang_mancato_barilo_vulcanic_CJ_WtK():
             raise Exception('Barel active after drawing hearts')
         if page_contains_by_text('Lose health'):
             raise Exception('Player losing health after success on Barel')
+        log_passed('Use Barilo')
         
         switch_to_current_player_window()
         use_bang(USERS[0])
         switch_to_window(USERS[0])
-
         if not player_hand_contains_active_card('Bang!'):
             raise Exception('Bang! not active after CJ got hit by Bang!')
         if not player_hand_contains_active_card('Mancato!'):
             raise Exception('Mancato! not active on Bang!')
-
         use_card('Bang!') # CJ uses Bang! as Mancato!
         if player_table_contains_active_card('Barilo'):
             raise Exception('Barel does not deactivate on Bang! as Mancato!')
         if page_contains_by_text('Lose health'):
             raise Exception('Player losing health after playing Mancato!')
+        log_passed('CJ')
+        log_passed('WtK')
 
         switch_to_current_player_window()
 
-        log_passed(test_name)
     except Exception as e:
         log_failed(test_name, e)
