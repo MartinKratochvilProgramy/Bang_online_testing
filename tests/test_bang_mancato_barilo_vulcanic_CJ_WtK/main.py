@@ -1,6 +1,6 @@
-from tests.test_bang.test_login import test_login
-from tests.test_bang.test_join_room import test_join_room
-from tests.test_bang.test_start_game import test_start_game
+from tests.test_bang_mancato_barilo_vulcanic_CJ_WtK.test_login import test_login
+from tests.test_bang_mancato_barilo_vulcanic_CJ_WtK.test_join_room import test_join_room
+from tests.test_bang_mancato_barilo_vulcanic_CJ_WtK.test_start_game import test_start_game
 from utils.logging.log_passed import log_passed
 from utils.logging.log_failed import log_failed
 from utils.window.switch_to_current_player_window import switch_to_current_player_window
@@ -16,7 +16,7 @@ from utils.locators.player_hand_contains_active_card import player_hand_contains
 from utils.locators.page_contains import page_contains_by_text
 from globals import *
 
-def test_bang():
+def test_bang_mancato_barilo_vulcanic_CJ_WtK():
     test_name = "Test Bang!, Mancato!, Barilo, Vulcanic, CJ, WtK"
     try:
         test_login()

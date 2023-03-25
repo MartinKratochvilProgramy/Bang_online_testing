@@ -6,7 +6,7 @@ from globals import *
 
 def login_all_users():
     for i, username in enumerate(USERS):
-        if i > 0:
+        if i + 1 > len(driver.window_handles):
             open_new_window(ROUTE)
         login_user(username)
         

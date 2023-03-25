@@ -1,14 +1,3 @@
-player1:
-    .bang
-        -is bang not playable?
-        -is mancato playable?
-    .place vulcanic
-        -is on table?
-        -is bang playable?
-    .place barel
-        -is on table?
-    
-player2:
-    .bang
-        -is barel usable?
-
+- indiani
+- gatling
+- duel

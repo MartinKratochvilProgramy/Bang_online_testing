@@ -11,4 +11,4 @@ def use_card(card_name: str):
     card.click()
 
     if len(cards) - len(driver.find_elements(By.ID, card_name)) != 1:
-        raise Exception(f"Number of {card_name}s in hand does not match")
+        raise Exception(f"On use_card: Number of {card_name}s in hand does not match")

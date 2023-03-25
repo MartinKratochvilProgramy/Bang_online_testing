@@ -14,7 +14,7 @@ def use_bang(target):
     oponent.click()
 
     if len(bangs) - len(driver.find_elements(By.ID, 'Bang!')) != 1:
-        raise Exception('Number of Bang!s in hand does not match')
+        raise Exception('On use_bang: Number of Bang!s in hand does not match')
     
     if page_contains_by_text('End turn'):
-        raise Exception('Can continue playing after using Bang!')
+        raise Exception('On use_bang: Can continue playing after using Bang!')
