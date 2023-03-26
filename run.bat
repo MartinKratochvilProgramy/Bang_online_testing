@@ -1,5 +1,6 @@
 set TEST_BANG=t_bang_dnpaueyIPoe
 set TEST_INDIANI=t_indiani_dnpaueyIPoe
+set TEST_PANICO=t_panico_dnpaueyIPoe
 start node "C:\Users\martv\Desktop\scratch\Bang_online\server\build\server.js"
 
 python -B "c:\Users\martv\Desktop\scratch\Bang_online_testing\main.py"

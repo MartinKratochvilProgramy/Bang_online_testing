@@ -1,3 +1,5 @@
-- indiani
-- gatling
-- duel
+-CB
+-panico
+
+-prigione
+-dynamite
