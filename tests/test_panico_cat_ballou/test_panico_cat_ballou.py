@@ -2,7 +2,6 @@ from utils.game.end_turn import end_turn
 from utils.game.lose_health import lose_health
 from utils.game.prepare_test import prepare_test
 from utils.game.use_bang import use_bang
-from utils.game.use_blue_card import use_blue_card
 from utils.game.use_card import use_card
 from utils.game.use_card_with_table_target import use_card_with_table_target
 from utils.game.use_card_with_target import use_card_with_target
@@ -22,16 +21,21 @@ from globals import driver, USERS
 
 def test_panico_cat_ballou():
     '''
-
+        CJ vs Jourdonnais
+        CJ ha Barilo on table, uses CB on Jourd
+        Jourd uses CB on Barilo
+        Jourd uses Panico on CJ
+        Jourd places Barilo on table
+        CJ uses Panico on Barilo
     '''
     
     test_name = "Test Panico, Cat Ballou"
     try:
-        USERS[0] = "t_panico_dnpaueyIPoe"
+        USERS[0] = "t_panico_dnpauey"
         prepare_test()
 
-        use_blue_card('Barilo')
-        
+        use_card('Barilo')
+
         test_cat_balou()
         test_panico()
 
@@ -90,7 +94,7 @@ def test_panico():
     if starting_cards_in_hand - ending_cards_in_hand != 0:
         raise Exception(f"Card not received in hand when targeting Panico on {USERS[0]}")
     
-    use_blue_card('Barilo')
+    use_card('Barilo')
     end_turn()
 
     # PANICO ON TABLE CARD   

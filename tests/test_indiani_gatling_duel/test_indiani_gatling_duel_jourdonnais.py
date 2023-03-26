@@ -25,7 +25,7 @@ def test_indiani_gatling_duel_jourdonnais():
     '''
     test_name = "Test Indiani, Gatling, Duel, Jourdonnais"
     try:
-        USERS[0] = "t_indiani_dnpaueyIPoe"
+        USERS[0] = "t_indiani_dnpauey"
         prepare_test()
 
         use_bang(USERS[1])

@@ -5,7 +5,6 @@ from utils.logging.log_passed import log_passed
 from utils.logging.log_failed import log_failed
 from utils.window.switch_to_current_player_window import switch_to_current_player_window
 from utils.window.switch_to_window import switch_to_window
-from utils.game.use_blue_card import use_blue_card
 from utils.game.use_bang import use_bang
 from utils.game.use_mancato import use_mancato
 from utils.game.use_card import use_card
@@ -30,7 +29,7 @@ def test_bang_mancato_barilo_vulcanic_CJ_WtK():
 
         switch_to_current_player_window()
 
-        use_blue_card('Barilo')
+        use_card('Barilo')
 
         # USE BANG! #1
         use_bang(USERS[1])
@@ -44,7 +43,7 @@ def test_bang_mancato_barilo_vulcanic_CJ_WtK():
         switch_to_current_player_window()
         
         # USE VULCANIC, RESET BANG!
-        use_blue_card('Vulcanic')
+        use_card('Vulcanic')
         # USE BANG! #2
         use_bang(USERS[1])
         switch_to_window(USERS[1])
