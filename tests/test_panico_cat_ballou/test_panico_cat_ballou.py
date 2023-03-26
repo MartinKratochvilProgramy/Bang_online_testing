@@ -90,9 +90,7 @@ def test_panico():
     if starting_cards_in_hand - ending_cards_in_hand != 0:
         raise Exception(f"Card not received in hand when targeting Panico on {USERS[0]}")
     
-    input()
     use_blue_card('Barilo')
-    input()
     end_turn()
 
     # PANICO ON TABLE CARD   
