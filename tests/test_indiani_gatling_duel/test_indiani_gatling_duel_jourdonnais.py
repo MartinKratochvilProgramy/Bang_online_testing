@@ -6,6 +6,7 @@ from utils.game.use_card import use_card
 from utils.game.use_card_with_target import use_card_with_target
 from utils.game.use_character import use_character
 from utils.locators.character_active import character_active
+from utils.locators.get_player_health import get_player_health
 from utils.locators.page_contains import page_contains_by_text
 from utils.logging.log_failed import log_failed
 from utils.logging.log_passed import log_passed
@@ -82,6 +83,16 @@ def test_indiani_gatling_duel_jourdonnais():
         if page_contains_by_text('Lose health'):
             raise Exception('Player still losing health after Lose health press')
         log_passed('Duel')
+
+        switch_to_window(USERS[1])
+        end_turn()
+
+        current_health = get_player_health()
+        
+        use_card('Beer')
+        
+        if get_player_health() - current_health != 1:
+            raise Exception('Beer did not add 1 life')
 
     except Exception as e:
         log_failed(test_name, e)

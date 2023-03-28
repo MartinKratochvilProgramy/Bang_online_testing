@@ -103,6 +103,11 @@ def test_prigione_dynamite():
             raise Exception('Page does not contain LEAVE ROOM on player death')
 
         log_passed('Dynamite')        
+
+        switch_to_window(USERS[0])
+        if not page_contains_by_text('LEAVE ROOM'):
+            raise Exception('Page does not contain LEAVE ROOM on player death')
+
         log_passed('Player death')        
 
     except Exception as e:
