@@ -3,6 +3,7 @@ set TEST_INDIANI=t_indiani_dnpauey
 set TEST_PANICO=t_panico_dnpauey
 set TEST_PRIGIONE=t_prigione_dnpauey
 set TEST_EMPORIO=t_emporio_dnpauey
+set TEST_STK=t_StK_dnpauey
 @REM start node "C:\Users\martv\Desktop\scratch\Bang_online\server\build\server.js"
 start node "C:\Users\martin.kratochvil\Desktop\scratch\Bang_online\server\build\server.js"
 
