@@ -1,8 +1,6 @@
--CB
--panico
+- Emporio
 
--prigione
--dynamite
+- distances
 
 character_active() should be called either empty or with username
     - now is being called with character name!

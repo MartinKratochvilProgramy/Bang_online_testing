@@ -24,9 +24,9 @@ from globals import driver, USERS
 
 def test_prigione_dynamite():
     '''
-        CJ vs Jourd
-        CJ places Jourd to 2 prisons, draw 1 fails
-        CJ places 2 dynamite on table, Jourd draws prison, success, then failure
+        CJ vs JJ
+        CJ places JJ to 2 prisons, draw 1 fails
+        CJ places 2 dynamite on table, JJ draws prison, success, then failure
     '''
     
     test_name = "Test Panico, Cat Ballou"
