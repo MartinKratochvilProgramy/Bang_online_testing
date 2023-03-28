@@ -22,43 +22,26 @@ from utils.locators.character_active import character_active
 from utils.locators.player_hand_contains_active_card import player_hand_contains_active_card
 from globals import driver, USERS
 
-def test_StK():
+def test_bart_cassidy():
     '''
-        StK vs Jourd
+        Bart Cassidy takes a hit
     '''
     
     test_name = "Test Panico, Cat Ballou"
     try:
-        USERS[0] = "t_StK_dnpauey"
+        USERS[0] = "t_bart_dnpauey"
         prepare_test()
 
         use_card_with_target('Bang!', USERS[1])
 
         switch_to_window(USERS[1])
-        use_card('Mancato!')
-        if not page_contains_by_text('Lose health'):
-            raise Exception('Player not losing health after 1 Mancato! on StK')
-        if not player_hand_contains_active_card('Mancato!'):
-            raise Exception('Player hand not active after 1 Mancato! on StK')
-        use_card('Mancato!')
-        if page_contains_by_text('Lose health'):
-            raise Exception('Player still losing health after 2 Mancato! on StK')
-        
-        switch_to_current_player_window()
-        end_turn()
+        current_num_of_cards_in_hand = get_num_of_cards_in_player_hand()
+        lose_health()
 
-        use_card('Barilo')
-        end_turn()
+        if get_num_of_cards_in_player_hand() - current_num_of_cards_in_hand != 1:
+            raise Exception('Bart Cassidy did not draw a card on being hit')
 
-        use_card_with_target('Bang!', USERS[1])
-
-        switch_to_window(USERS[1])
-        use_character()
-        use_table_card('Barilo')
-        if page_contains_by_text('Lose health'):
-            raise Exception('Player still losing health after Jourdonnais and Barilo draw on StK')
-        
-        log_passed('Slab the Killer')
+        log_passed('Bart Cassidy')
 
     except Exception as e:
         log_failed(test_name, e)

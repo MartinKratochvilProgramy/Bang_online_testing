@@ -1,5 +1,3 @@
-- StK
-
 - distances
 
 character_active() should be called either empty or with username
