@@ -17,3 +17,4 @@ def prepare_test():
     start_game()
     pick_characters()
     switch_to_current_player_window()
+0

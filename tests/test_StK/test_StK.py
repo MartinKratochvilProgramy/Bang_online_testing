@@ -27,7 +27,7 @@ def test_StK():
         StK vs Jourd
     '''
     
-    test_name = "Test Panico, Cat Ballou"
+    test_name = "Test StK"
     try:
         USERS[0] = "t_StK_dnpauey"
         prepare_test()

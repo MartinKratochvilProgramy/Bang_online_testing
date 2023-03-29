@@ -29,7 +29,7 @@ def test_prigione_dynamite():
         CJ places 2 dynamite on table, JJ draws prison, success, then failure
     '''
     
-    test_name = "Test Panico, Cat Ballou"
+    test_name = "Test Prigione, Dynamite"
     try:
         USERS[0] = "t_prigione_dnpauey"
         prepare_test()

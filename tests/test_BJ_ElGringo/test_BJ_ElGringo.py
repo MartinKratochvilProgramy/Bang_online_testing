@@ -24,10 +24,9 @@ from globals import driver, USERS
 
 def test_BJ_ElGringo():
     '''
-        Bart Cassidy takes a hit
     '''
     
-    test_name = "Test Panico, Cat Ballou"
+    test_name = "Test BJ, ElGringo"
     try:
         USERS[0] = "t_BJ_ElG_dnpauey"
         prepare_test()

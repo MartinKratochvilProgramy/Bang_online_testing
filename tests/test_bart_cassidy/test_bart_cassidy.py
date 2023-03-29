@@ -27,7 +27,7 @@ def test_bart_cassidy():
         Bart Cassidy takes a hit
     '''
     
-    test_name = "Test Panico, Cat Ballou"
+    test_name = "Test Bart Cassidy"
     try:
         USERS[0] = "t_bart_dnpauey"
         prepare_test()

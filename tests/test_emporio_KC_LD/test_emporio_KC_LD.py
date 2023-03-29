@@ -34,7 +34,7 @@ def test_emporio_KC_LD():
 
     '''
     
-    test_name = "Test Emporio"
+    test_name = "Test Emporio, KC, LD"
     try:
         USERS[0] = "t_emporio_dnpauey"
         prepare_test()
