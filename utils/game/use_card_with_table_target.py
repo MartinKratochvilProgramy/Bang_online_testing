@@ -1,7 +1,5 @@
 from selenium.webdriver.common.by import By
 from globals import driver
-from utils.locators.get_num_of_cards_in_player_hand import get_num_of_cards_in_player_hand
-from utils.locators.get_num_of_cards_on_target_player_table import get_num_of_cards_on_target_player_table
 
 def use_card_with_table_target(card_name: str, target: str, target_card: str):
     '''

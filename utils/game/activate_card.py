@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
 from globals import driver
-from utils.locators.get_num_of_cards_in_player_hand import get_num_of_cards_in_player_hand
 
 def activate_card(card_name: str):
     '''
